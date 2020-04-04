@@ -1,0 +1,149 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "1809d66b-da84-4097-952e-24cab0c69e44": {
+        "id": "1809d66b-da84-4097-952e-24cab0c69e44",
+        "parent": null,
+        "name": "keells.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "keells.js",
+        "cursor": {
+          "lineNumber": 60,
+          "column": 85
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "keells"
+        },
+        "triggers": [],
+        "testCases": {
+          "c4eaf90e-1697-4d22-bd33-114ea907af12": {
+            "id": "c4eaf90e-1697-4d22-bd33-114ea907af12",
+            "name": "poll",
+            "functionId": "1809d66b-da84-4097-952e-24cab0c69e44",
+            "event": "{}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "da41bdff-2af1-4851-8ce0-4ff67d579b01": {
+        "id": "da41bdff-2af1-4851-8ce0-4ff67d579b01",
+        "parent": null,
+        "name": "test.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "test.js",
+        "cursor": {
+          "lineNumber": 29,
+          "column": 15
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "test"
+        },
+        "triggers": []
+      }
+    },
+    "openFiles": [
+      "1809d66b-da84-4097-952e-24cab0c69e44",
+      "da41bdff-2af1-4851-8ce0-4ff67d579b01"
+    ],
+    "currentFileId": "1809d66b-da84-4097-952e-24cab0c69e44",
+    "resources": {
+      "sqsordersfifo": {
+        "name": "sqsordersfifo",
+        "type": "SQS",
+        "config": {
+          "mode": 1,
+          "existing": true,
+          "name": "orders.fifo",
+          "url": "https://sqs.us-east-1.amazonaws.com/263248768798/orders.fifo",
+          "selectedRegion": "us-east-1",
+          "deliveryDelay": "0",
+          "deliveryDelayUnit": "seconds",
+          "queueType": "fifoQueue",
+          "defaultVisibilityTimeout": "30",
+          "defaultVisibilityTimeoutUnit": "seconds",
+          "messageRetentionPeriod": "3600",
+          "messageRetentionPeriodUnit": "seconds",
+          "maximumMessageSize": 256,
+          "receiveMessageWaitTime": "0",
+          "queueARN": "arn:aws:sqs:us-east-1:263248768798:orders.fifo"
+        }
+      },
+      "ddbstock": {
+        "name": "ddbstock",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 1,
+          "table": {
+            "arn": "arn:aws:dynamodb:us-east-1:263248768798:table/stock",
+            "name": "stock",
+            "partitionKey": "item_code",
+            "partitionKeyType": "N",
+            "hasSortKey": true,
+            "sortKey": "location_code",
+            "sortKeyType": "N",
+            "payPerRequest": true,
+            "mode": 1
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": "CloudFormation",
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "nodejs",
+          "version": "2.644.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "keells",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "language": "nodejs",
+    "lastSave": 1585981337559
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "keells",
+      "url": "https://github.com/asankhaperera/keells"
+    }
+  }
+}
